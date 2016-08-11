@@ -9,10 +9,14 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,8 +43,10 @@ public class MainActivity extends AppCompatActivity {
     private class SynUser extends AsyncTask<Void, Void, String> {
         //Explicit
         private Context context;
-        private String myUserString, myPasswordString;
+        private String myUserString, myPasswordString,truePasswordString,nameString;
         private static final String urlJON = "http://swiftcodingthai.com/mama/get_data_mama.php";
+        private boolean statusABoolean = true;
+
 
         public SynUser(Context context, String myUserString, String myPasswordString) {
             this.context = context;
@@ -70,6 +76,42 @@ public class MainActivity extends AppCompatActivity {
             super.onPostExecute(s);
 
             Log.d("11AugV1", "JSON ==>" + s);
+
+            try {
+
+                JSONArray jsonArray = new JSONArray(s);
+                for (int i=0;i<jsonArray.length(); i+=1) {
+
+                    JSONObject jsonObject = jsonArray.getJSONObject(i);
+
+                    if (myUserString.equals(jsonObject.getString("user"))) {
+                        statusABoolean = false;
+                        truePasswordString = jsonObject.getString("password");
+                        nameString = jsonObject.getString("name");
+
+                    }   //if
+
+                }   //for
+                //Chk user
+                if (statusABoolean) {
+                    //User Fail
+                    MyAlert myAlert = new MyAlert();
+                    myAlert.myDialog(context,"User Fail","ไม่มีข้อมูล"+myUserString+"ในฐานข้อมูลของเรา");
+                } else if (myPasswordString.equals(truePasswordString)) {
+                    // Pass True
+                    Toast.makeText(context,"Welcome"+nameString,
+                            Toast.LENGTH_SHORT).show();
+
+                } else {
+                    //Password fail
+                    MyAlert myAlert = new MyAlert();
+                    myAlert.myDialog(context, "Password Fail",
+                            "Please Try Again");
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
 
         }   // Posting
     }   //SynUser Class
