@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">CoachingTools</string>
+
+    <string name="have_space_title">มีช่องว่าง</string>
+    <string name="have_space_message">กรุณากรอกให้ครบถ้วนคะ</string>
+
+
+
 </resources>
