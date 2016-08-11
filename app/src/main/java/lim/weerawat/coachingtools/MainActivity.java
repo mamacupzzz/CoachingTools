@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     }   //Main Methood
 
 
+
     public void clickSignUpMain(View view) {
         startActivity(new Intent(MainActivity.this,SignUPActivity.class));
     }
