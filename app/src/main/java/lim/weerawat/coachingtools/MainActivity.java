@@ -101,6 +101,10 @@ public class MainActivity extends AppCompatActivity {
                     // Pass True
                     Toast.makeText(context,"Welcome"+nameString,
                             Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this,ServiceActivity.class);
+                    intent.putExtra("Login", nameString);
+                    startActivity(intent);
+                    finish();
 
                 } else {
                     //Password fail
