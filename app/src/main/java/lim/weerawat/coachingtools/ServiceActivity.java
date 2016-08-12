@@ -19,6 +19,7 @@ public class ServiceActivity extends AppCompatActivity {
 
     //Explicit
     private static final int myINT = 1;
+    private static final int vdoINT = 2;
     private String videopathString, namevdoString;
 
     @Override
@@ -26,6 +27,17 @@ public class ServiceActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_service);
     }    //Main Method
+
+    public void clickrecordvdo(View view) {
+
+        Intent intent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
+        startActivityForResult(intent, vdoINT);
+
+
+
+
+    }   //clickrecord
+
 
     @Override
     protected void onActivityResult(int requestCode,
