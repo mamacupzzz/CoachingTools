@@ -71,6 +71,39 @@
                 android:layout_weight="1"
                 android:gravity="center_horizontal" />
         </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_gravity="right" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView3"
+                android:layout_weight="1"
+                android:src="@drawable/green"
+                android:onClick="clickanalysis" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ANALYSIS"
+                android:id="@+id/textView9"
+                android:textSize="@dimen/h2"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:gravity="center_horizontal" />
+
+        </LinearLayout>
     </LinearLayout>
 
 </RelativeLayout>

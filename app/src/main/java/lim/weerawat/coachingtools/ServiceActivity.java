@@ -28,6 +28,13 @@ public class ServiceActivity extends AppCompatActivity {
         setContentView(R.layout.activity_service);
     }    //Main Method
 
+    public void clickanalysis(View view) {
+
+        startActivity(new Intent(ServiceActivity.this,Analysis.class));
+
+
+    }
+
     public void clickrecordvdo(View view) {
 
         Intent intent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
