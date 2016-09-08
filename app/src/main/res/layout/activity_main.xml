@@ -24,7 +24,10 @@
             android:id="@+id/button"
             android:layout_weight="1"
             android:textColor="@color/text"
-            android:onClick="clickSignIn" />
+            android:onClick="clickSignIn"
+            android:background="#3df21c1c"
+            android:textStyle="bold"
+            android:textSize="@dimen/abc_action_bar_progress_bar_size" />
 
         <Button
             android:layout_width="wrap_content"
@@ -33,7 +36,10 @@
             android:id="@+id/button2"
             android:layout_weight="1"
             android:onClick="clickSignUpMain"
-            android:textColor="@color/text" />
+            android:textColor="@color/text"
+            android:background="#3d7bf562"
+            android:textStyle="bold"
+            android:textSize="@dimen/abc_action_bar_progress_bar_size" />
 
     </LinearLayout>
 
@@ -44,7 +50,7 @@
         android:padding="20dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp"
-        android:background="#f4eb95">
+        android:background="#a4f4eb95">
 
         <TextView
             android:layout_width="wrap_content"
@@ -61,7 +67,8 @@
             android:id="@+id/editText4"
             android:hint="User :"
             android:inputType="text"
-            android:textColor="@color/text" />
+            android:textColor="@color/text"
+            android:textStyle="bold" />
 
         <EditText
             android:layout_width="match_parent"
@@ -69,30 +76,28 @@
             android:id="@+id/editText5"
             android:hint="Password :"
             android:inputType="textPassword"
-            android:textColor="@color/text" />
+            android:textColor="@color/text"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="20dp"
+        android:padding="10dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="false"
-        android:foregroundGravity="fill_horizontal|fill_vertical|center_horizontal"
         android:layout_marginBottom="180dp"
-        android:background="#7bfbf9">
+        android:background="#877bfbf9">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:id="@+id/imageView4"
             android:src="@drawable/ssmu"
-            android:layout_centerVertical="true"
-            android:layout_gravity="center"
-            android:foregroundGravity="center_vertical|center_horizontal" />
+            android:layout_centerVertical="true" />
 
         <ImageView
             android:layout_width="wrap_content"
