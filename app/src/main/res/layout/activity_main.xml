@@ -69,4 +69,37 @@
             android:inputType="textPassword"
             android:textColor="@color/text" />
     </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="false"
+        android:foregroundGravity="fill_horizontal|fill_vertical|center_horizontal"
+        android:layout_marginBottom="180dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView4"
+            android:src="@drawable/ssmu"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:foregroundGravity="center_vertical|center_horizontal" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView5"
+            android:src="@drawable/dpe"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:foregroundGravity="center_vertical|center_horizontal" />
+
+    </LinearLayout>
+
 </RelativeLayout>
